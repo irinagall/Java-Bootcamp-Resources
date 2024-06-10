@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
 public class Contact {
     private String name;
     private String phoneNumber;
@@ -8,7 +12,7 @@ public class Contact {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
-        this.age = age;
+        this.age = toAge(birthDate);
     }
 
     public Contact(Contact source) {
@@ -41,14 +45,21 @@ public class Contact {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+        setAge(toAge(birthDate));
     }
 
     public int getAge() {
         return this.age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 
+    public int toAge(String birthDate) {
+        LocalDate parsedBirthDate = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        LocalDate currentDate = LocalDate.now();
+        Period period = Period.between(parsedBirthDate, currentDate);
+        return period.getYears();
+    }
 }
