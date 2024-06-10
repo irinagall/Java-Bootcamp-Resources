@@ -56,10 +56,13 @@ public class Book {
     // 6. override the equals method
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof Book)) {
+            return false;
+        }
         Book book = (Book) o;
-        return Double.compare(rating, book.rating) == 0 && Double.compare(price, book.price) == 0 && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+        return Objects.equals(title, book.title) && Objects.equals(author, book.author) && rating == book.rating && price == book.price;
     }
 
 }
