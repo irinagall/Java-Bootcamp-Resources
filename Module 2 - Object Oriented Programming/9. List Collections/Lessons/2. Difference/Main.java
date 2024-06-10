@@ -27,7 +27,7 @@ public class Main {
 		arrayList.get(4_500_000);
         System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
         
-
+/*
         /******************FIRST / LAST INDEX******************/
 
         // System.out.println("\nFIRST / LAST INDEX\n");
@@ -44,54 +44,54 @@ public class Main {
 
 
         /******************INSERTION FROM MIDDLE******************/
-
-        // System.out.println("\nINSERTION FROM MIDDLE\n");
-
-        // start = System.currentTimeMillis();
-        // linkedList.add(5, 121); // insert 121 at index 5
-        // System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
-
-        // start = System.currentTimeMillis();
-        // arrayList.add(5, 121);  // insert 121 at index 5
-        // System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
-
+//
+//         System.out.println("\nINSERTION FROM MIDDLE\n");
+//
+//         start = System.currentTimeMillis();
+//         linkedList.add(5, 121); // insert 121 at index 5
+//         System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
+//
+//         start = System.currentTimeMillis();
+//         arrayList.add(5, 121);  // insert 121 at index 5
+//         System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
+//
 
         /******************INSERTION******************/
-
-        // System.out.println("\nINSERTION\n");
-
-        // start = System.currentTimeMillis();		
-        // linkedList.add(121);
-        // System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
-
-        // start = System.currentTimeMillis();
-        // arrayList.add(121);
-        // System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
+//
+//         System.out.println("\nINSERTION\n");
+//
+//         start = System.currentTimeMillis();
+//         linkedList.add(121);
+//         System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
+//
+//         start = System.currentTimeMillis();
+//         arrayList.add(121);
+//         System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
 
         /******************REMOVAL******************/
-        
-        // System.out.println("\nREMOVAL\n");
-
-        // start = System.currentTimeMillis();			
-        // linkedList.remove(400);
-        // System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
-
-        // start = System.currentTimeMillis();			
-        // arrayList.remove(400);
-        // System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
+//
+//         System.out.println("\nREMOVAL\n");
+//
+//         start = System.currentTimeMillis();
+//         linkedList.remove(400);
+//         System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
+//
+//         start = System.currentTimeMillis();
+//         arrayList.remove(400);
+//         System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
 
 
         /******************UPDATES******************/
 
-        // System.out.println("\nUPDATES\n");
+         System.out.println("\nUPDATES\n");
 
-        // start = System.currentTimeMillis();					
-		// linkedList.set(4_500_000, 5);
-        // System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
+         start = System.currentTimeMillis();
+		 linkedList.set(4_500_000, 5);
+         System.out.println("LinkedList: " + (System.currentTimeMillis() - start) + "ms");
 
-        // start = System.currentTimeMillis();			
-		// arrayList.set(4_500_000, 5);
-        // System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
+         start = System.currentTimeMillis();
+		 arrayList.set(4_500_000, 5);
+         System.out.println("ArrayList: " + (System.currentTimeMillis() - start) + "ms");
 
 	}
 

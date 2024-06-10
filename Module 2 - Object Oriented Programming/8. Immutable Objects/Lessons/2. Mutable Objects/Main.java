@@ -13,7 +13,7 @@ public class Main {
         // **************** Mutable Object ****************
         
         City city = new City("Paris", 2161000);
-        City secondCity = city;            // DANGEROUS
+        City secondCity = new City(city);           
 
         city.setPopulation(2261000);
         secondCity.setPopulation(2263400);
