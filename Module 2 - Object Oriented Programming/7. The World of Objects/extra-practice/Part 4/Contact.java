@@ -21,10 +21,11 @@ public class Contact {
         this.birthDate = source.birthDate;
         this.age = source.age;
     }
+
     public String getName() {
         return name;
     }
-    
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -41,7 +42,7 @@ public class Contact {
         this.name = name;
     }
 
-    public void setPhoneNumber(String phoneNumber) {        
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -61,4 +62,12 @@ public class Contact {
         return period.getYears();
     }
 
+    @Override
+    public String toString() {
+        return
+                "name='" + this.name + "\n" +
+                ", phoneNumber='" + this.phoneNumber + "\n" +
+                ", birthDate='" + this.birthDate + "\n" +
+                ", age=" + this.age + "years old \n";
+    }
 }
