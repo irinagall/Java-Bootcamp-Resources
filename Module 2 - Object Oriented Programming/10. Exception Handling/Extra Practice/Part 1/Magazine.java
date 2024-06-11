@@ -9,57 +9,54 @@ public class Magazine {
         setPublisher(publisher);
         setIssueNumber(issueNumber);
         setPublicationYear(publicationYear);
+
     }
 
-    public Magazine(Magazine source) {
-        setTitle(source.getTitle());
-        setPublisher(source.getPublisher());
-        setIssueNumber(source.getIssueNumber());
-        setPublicationYear(source.getPublicationYear());
-    }
-
+    //Task 2: perform argument validation on the setter methods
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public void setTitle(String title) {
         if (title == null || title.isBlank()) {
-            throw new IllegalArgumentException("Title cannot be null or blank.");
+            throw new IllegalArgumentException("Tittle should not be null or blank");
+
         }
         this.title = title;
     }
 
+
     public String getPublisher() {
-        return this.publisher;
+        return publisher;
     }
 
     public void setPublisher(String publisher) {
         if (publisher == null || publisher.isBlank()) {
-            throw new IllegalArgumentException("Publisher cannot be null or blank.");
+            throw new IllegalArgumentException("Publisher cannot be null or blank");
         }
         this.publisher = publisher;
     }
 
     public int getIssueNumber() {
-        return this.issueNumber;
+        return issueNumber;
     }
 
     public void setIssueNumber(int issueNumber) {
         if (issueNumber <= 0) {
-            throw new IllegalArgumentException("Issue number must be greater than 0.");
+            throw new IllegalArgumentException("Issue number must be greater than 0");
         }
         this.issueNumber = issueNumber;
     }
 
     public int getPublicationYear() {
-        return this.publicationYear;
+        return publicationYear;
     }
-
 
     public void setPublicationYear(int publicationYear) {
         if (publicationYear <= 0) {
-            throw new IllegalArgumentException("Publication year must be greater than 0.");
+            throw new IllegalArgumentException("Publication year must be greater than 0");
         }
         this.publicationYear = publicationYear;
+
     }
 }
