@@ -35,22 +35,29 @@ public class Main {
         scanner.close();
     }
 
+    //Task 3 The method promptForChoice will return the integer they choose.
     public static int promptForChoice(Scanner scanner) {
         while (true) {
             System.out.print("\nPlease choose an integer between 0 - 9: ");
 
             // 1. Anticipate the user not entering an integer.
+            if (!scanner.hasNextInt()){
+                scanner.next();
+                continue;
+            }
 
             int choice = scanner.nextInt();
-
             // 2. Anticipate the choice being incorrect.
+            if(incorrectChoice(choice)){
+                continue;
+            }
             return choice;
         }
     }
 
+    //This method should return true if the choice is less than 0 or greater than 9.
     public static boolean incorrectChoice(int choice) {
-        // TODO
-        return false;
+        return choice < 0 || 9 < choice;
     }
 
     public static double promptForRating(Scanner scanner, String name) {
@@ -58,18 +65,21 @@ public class Main {
             System.out.print("\nSet a new rating for " + name + ": ");
             
             // 1. Anticipate the user not entering a double.
-
+            if(!scanner.hasNextDouble()){
+                scanner.next();
+                continue;
+            }
             double rating = scanner.nextDouble();
             
             // 2. Anticipate the rating being incorrect.
-
+            if(incorrectRating(rating)) continue;
             return rating;
          }
     }
 
     public static boolean incorrectRating(double rating) {
-        // TODO
-        return false;
+        //This method should return true if the rating is less than 0 or greater than 10.
+        return rating < 0 || rating > 10;
     }
 
     public static void loadMovies(String fileName) throws FileNotFoundException {
