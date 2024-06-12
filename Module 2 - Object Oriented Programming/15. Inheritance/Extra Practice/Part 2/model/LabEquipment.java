@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public abstract class LabEquipment {
     private String manufacturer;
     private String model;
@@ -7,10 +9,17 @@ public abstract class LabEquipment {
 
     public static final int MIN_YEAR = 1950;
 
+
     public LabEquipment(String manufacturer, String model, int year) {
         setManufacturer(manufacturer);
         setModel(model);
         setYear(year);
+    }
+
+    public LabEquipment(LabEquipment source) {
+        setManufacturer(source.manufacturer);
+        setModel(source.model);
+        setYear(source.year);
     }
 
     public String getManufacturer() {
@@ -47,4 +56,6 @@ public abstract class LabEquipment {
     }
 
     public abstract String performMaintenance();
+
+    public abstract LabEquipment clone();
 }
