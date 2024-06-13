@@ -19,7 +19,7 @@ public class MovieStore {
     }
 
     public List<Movie> sortByReleaseYear(){
-      return movies.stream().sorted((movie1 , movie2nd) -> Integer.compare(movie2nd.getReleaseYear(), movie1.getReleaseYear())).toList();
+      return movies.stream().sorted((movie1 , movie2nd) -> Integer.compare(movie1.getReleaseYear(), movie2nd.getReleaseYear())).toList();
     }
 
    public List<Movie> getTopRatedMovies(int maxOutputMovies){
